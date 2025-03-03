@@ -1,7 +1,8 @@
 Tasks left:
-    - Delete function
-    - Add type filter to search
+    - Add images to readme of completed work
 
-Future potential improvements:
+Potential improvements:
+    - Add another loading indicator during a search query
+    - Multi-select for item deletion
     - Better responsiveness on mobile
-    - Add "All Items" list that can be lazy loaded on scroll down, separate from search results
+    - Add "All Items" section that can be lazy loaded on scroll down, separate from search results

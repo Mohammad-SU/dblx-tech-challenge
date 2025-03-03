@@ -14,8 +14,8 @@ Route::get('dashboard', DashboardController::class)
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
 
-// Route::delete('/items/{item}', [DashboardController::class, 'destroy'])
-//     ->name('items.destroy');
+Route::delete('/items/{item}', [DashboardController::class, 'destroy'])
+    ->name('items.destroy');
 
 Route::get('admin/dashboard', AdminDashboardController::class)
     ->middleware(['auth', 'verified'])
