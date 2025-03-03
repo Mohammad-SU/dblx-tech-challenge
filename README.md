@@ -6,6 +6,12 @@
 ### Search Function With Type Filter and Clear Button
 ![Item List With Delete Button on Hover](screenshots/screenshot_2.png)
 
+## Potential Improvements:
+  - Add another loading indicator during a search query
+  - Multi-select for item deletion
+  - Better responsiveness on mobile
+  - Add "All Items" section that can be lazy loaded on scroll down, separate from search results
+
 # Original challenge info:
 <p align="center">
   <a href="https://dblx.co.uk" target="_blank">
