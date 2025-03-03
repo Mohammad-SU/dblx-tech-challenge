@@ -33,7 +33,7 @@ const types = [
     { value: 'WEBLINK', label: 'Weblinks' },
 ];
 
-// Debounce search and type filter
+// Debounce search and type filter to prevent too many requests
 let timeout: NodeJS.Timeout;
 watch([search, selectedType], ([newSearch, newType]) => {
     clearTimeout(timeout);
