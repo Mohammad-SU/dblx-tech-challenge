@@ -5,6 +5,7 @@ import { Head, router } from '@inertiajs/vue3';
 import PlaceholderPattern from '../components/PlaceholderPattern.vue';
 import Card from '@/components/Card.vue';
 import { ref, watch } from 'vue';
+import { FilterX } from 'lucide-vue-next';
 
 const breadcrumbs: BreadcrumbItem[] = [
     {
@@ -62,6 +63,22 @@ const deleteItem = async (item: any) => {
     }
 };
 
+const clearFilters = () => {
+    search.value = '';
+    selectedType.value = '';
+    router.get('/dashboard', 
+        { 
+            search: '',
+            type: ''
+        }, 
+        {
+            preserveState: true,
+            preserveScroll: true,
+            replace: true
+        }
+    );
+};
+
 </script>
 
 <template>
@@ -82,7 +99,7 @@ const deleteItem = async (item: any) => {
                     </div>
                     <select
                         v-model="selectedType"
-                        class="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                        class="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white hover:bg-gray-100 cursor-pointer"
                     >
                         <option 
                             v-for="type in types" 
@@ -92,6 +109,13 @@ const deleteItem = async (item: any) => {
                             {{ type.label }}
                         </option>
                     </select>
+                    <button
+                        @click="clearFilters"
+                        class="px-4 py-2 border rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 flex items-center gap-2 cursor-pointer"
+                    >
+                        <FilterX class="h-5 w-5" />
+                        Clear
+                    </button>
                 </div>
             </div>
             <div class="p-6 bg-white rounded-xl border border-sidebar-border/70 dark:border-sidebar-border">
