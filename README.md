@@ -1,3 +1,12 @@
+Screenshots of completed challenge:
+
+### Item List With Delete Button on Hover
+![Item List With Delete Button on Hover](screenshots/screenshot_1.png)
+
+### Search Function With Type Filter and Clear Button
+![Item List With Delete Button on Hover](screenshots/screenshot_2.png)
+
+Original challenge info:
 <p align="center">
   <a href="https://dblx.co.uk" target="_blank">
     <picture>

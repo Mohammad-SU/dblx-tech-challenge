@@ -1,6 +1,3 @@
-Tasks left:
-    - Add images to readme of completed work
-
 Potential improvements:
     - Add another loading indicator during a search query
     - Multi-select for item deletion
