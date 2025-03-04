@@ -87,19 +87,19 @@ const clearFilters = () => {
     <AppLayout :breadcrumbs="breadcrumbs">
         <div class="flex h-full flex-1 flex-col gap-4 rounded-xl p-4">
             <div class="p-6 bg-white rounded-xl border border-sidebar-border/70 dark:border-sidebar-border">
-                <h3 class="text-2xl mb-4">Search</h3>
+                <h3 class="text-2xl mb-4 text-black">Search</h3>
                 <div class="flex gap-4">
                     <div class="flex-1 relative">
                         <input
                             type="text"
                             v-model="search"
                             placeholder="Search by name..."
-                            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            class="w-full px-4 py-2 border text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />
                     </div>
                     <select
                         v-model="selectedType"
-                        class="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white hover:bg-gray-100 cursor-pointer"
+                        class="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 text-black focus:ring-blue-500 bg-white hover:bg-gray-100 cursor-pointer"
                     >
                         <option 
                             v-for="type in types" 
@@ -111,7 +111,7 @@ const clearFilters = () => {
                     </select>
                     <button
                         @click="clearFilters"
-                        class="px-4 py-2 border rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 flex items-center gap-2 cursor-pointer"
+                        class="px-4 py-2 border text-black rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 flex items-center gap-2 cursor-pointer"
                     >
                         <FilterX class="h-5 w-5" />
                         Clear
@@ -119,7 +119,7 @@ const clearFilters = () => {
                 </div>
             </div>
             <div class="p-6 bg-white rounded-xl border border-sidebar-border/70 dark:border-sidebar-border">
-                <h3 class="text-2xl">Latest Items</h3>
+                <h3 class="text-2xl text-black">Latest Items</h3>
                 
                 <div v-if="items.length === 0" class="mt-4 text-center text-gray-500">
                     No items found
